@@ -1,8 +1,8 @@
 <?php
 
-namespace Barryvdh\Queue\Connectors;
+namespace GenesisWeb\Queue\Connectors;
 
-use Barryvdh\Queue\AsyncQueue;
+use GenesisWeb\Queue\AsyncQueue;
 use Illuminate\Queue\Connectors\DatabaseConnector;
 use Illuminate\Support\Arr;
 

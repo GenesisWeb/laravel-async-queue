@@ -1,9 +1,9 @@
 <?php
 
-namespace Barryvdh\Queue;
+namespace GenesisWeb\Queue;
 
-use Barryvdh\Queue\Connectors\AsyncConnector;
-use Barryvdh\Queue\Console\AsyncCommand;
+use GenesisWeb\Queue\Connectors\AsyncConnector;
+use GenesisWeb\Queue\Console\AsyncCommand;
 use Illuminate\Support\ServiceProvider;
 
 class AsyncServiceProvider extends ServiceProvider

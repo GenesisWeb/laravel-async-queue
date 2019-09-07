@@ -1,8 +1,8 @@
 <?php
 
-namespace Barryvdh\Queue\Console;
+namespace GenesisWeb\Queue\Console;
 
-use Barryvdh\Queue\AsyncQueue;
+use GenesisWeb\Queue\AsyncQueue;
 use Illuminate\Console\Command;
 use Illuminate\Queue\Worker;
 use Illuminate\Queue\WorkerOptions;
@@ -23,7 +23,7 @@ class AsyncCommand extends Command
      * @var string
      */
     protected $description = 'Run a queue job from the database';
-    
+
     /**
 	 * The queue worker instance.
 	 *
@@ -53,7 +53,7 @@ class AsyncCommand extends Command
     {
         $id = $this->argument('id');
         $connection = $this->argument('connection');
-        
+
         $this->processJob(
 			$connection, $id, $options
 		);
@@ -74,7 +74,7 @@ class AsyncCommand extends Command
 
         /** @var AsyncQueue $connection */
         $connection = $manager->connection($connectionName);
-        
+
 		$job = $connection->getJobFromId($id);
 
 		if ( ! is_null($job)) {

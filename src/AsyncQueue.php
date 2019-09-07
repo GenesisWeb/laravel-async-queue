@@ -1,5 +1,5 @@
 <?php
-namespace Barryvdh\Queue;
+namespace GenesisWeb\Queue;
 
 use Illuminate\Database\Connection;
 use Illuminate\Queue\DatabaseQueue;
@@ -11,10 +11,10 @@ class AsyncQueue extends DatabaseQueue
 {
     /** @var string */
     protected $binary;
-    
+
     /** @var string */
     protected $binaryArgs;
-    
+
     /** @var string */
     protected $connectionName;
 
@@ -50,7 +50,7 @@ class AsyncQueue extends DatabaseQueue
 
         return $id;
     }
-    
+
     /**
      * Push a raw payload onto the queue.
      *
@@ -66,7 +66,7 @@ class AsyncQueue extends DatabaseQueue
 
         return $id;
     }
-    
+
     /**
      * Push a new job onto the queue after a delay.
      *
@@ -84,7 +84,7 @@ class AsyncQueue extends DatabaseQueue
 
         return $id;
     }
-    
+
     /**
      * Create an array to insert for the given job.
      *
@@ -101,7 +101,7 @@ class AsyncQueue extends DatabaseQueue
 
         return $record;
     }
-    
+
     /**
      * Get the next available job for the queue.
      *
@@ -113,7 +113,7 @@ class AsyncQueue extends DatabaseQueue
         $job = $this->database->table($this->table)
                     ->where('id', $id)
                     ->first();
-                    
+
         if ($job) {
             $job = $this->markJobAsReserved(new DatabaseJobRecord((object) $job));
             return new DatabaseJob(
@@ -121,7 +121,7 @@ class AsyncQueue extends DatabaseQueue
             );
         }
     }
-    
+
     /**
      * Make a Process for the Artisan command for the job id.
      *

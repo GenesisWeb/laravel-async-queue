@@ -1,23 +1,23 @@
 {
-    "name": "barryvdh/laravel-async-queue",
-    "description": "Async Queue Driver for Laravel (Push to background)",
+    "name": "genesisweb/laravel-async-queue",
+    "description": "Async Queue Driver for Laravel (Push to background) (Forked from barryvdh)",
     "keywords": ["laravel", "queue", "async", "background"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Barry vd. Heuvel",
-            "email": "barryvdh@gmail.com"
+            "name": "Uttam Rabadiya",
+            "email": "uttamrabadiya@gmail.com"
         }
     ],
     "require": {
         "php": ">=7",
-        "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x",
-        "illuminate/console": "5.5.x|5.6.x|5.7.x|5.8.x",
+        "illuminate/support": "5.5.x|5.6.x|5.7.x|5.8.x|6.0.x",
+        "illuminate/console": "5.5.x|5.6.x|5.7.x|5.8.x|6.0.x",
         "symfony/process": "^3.2|^4"
     },
     "autoload": {
         "psr-4": {
-            "Barryvdh\\Queue\\": "src/"
+            "GenesisWeb\\Queue\\": "src/"
         }
     },
     "extra": {
@@ -26,7 +26,7 @@
         },
         "laravel": {
             "providers": [
-                "Barryvdh\\Queue\\AsyncServiceProvider"
+                "GenesisWeb\\Queue\\AsyncServiceProvider"
             ]
         }
     }

@@ -2,6 +2,7 @@
 
 ## Push a function/closure to the background.
 
+#####Forked for Laravel 6 support, all credits to [Barryvdh](https://github.com/barryvdh).
 
 ### For Laravel 5.4, check the [0.6 branch](https://github.com/barryvdh/laravel-async-queue/tree/v0.6.0)
 
@@ -17,11 +18,11 @@ This package is more usable as an alternative for running incidental tasks in th
 
 Require the latest version of this package with Composer
 
-    composer require barryvdh/laravel-async-queue
+    composer require genesisweb/laravel-async-queue
 
 Add the Service Provider to the providers array in config/app.php
 
-    Barryvdh\Queue\AsyncServiceProvider::class,
+    GenesisWeb\Queue\AsyncServiceProvider::class,
 
 You need to create the migration table for queues and run it.
 
